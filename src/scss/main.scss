@@ -149,14 +149,14 @@ body {
     top: 0;
 
     > * {
-      transition: all .4s .1s ease;
+      transition: all .2s ease;
     }
 
-    > *:first-child {  transition-delay: .4s; }
-    > *:nth-child(2) { transition-delay: .25s; }
-    > *:nth-child(3) { transition-delay: .2s; }
-    > *:nth-child(4) { transition-delay: .15s; }
-    > *:nth-child(5) { transition-delay: .1s; }
+    > *:first-child {  transition-delay: .35s; }
+    > *:nth-child(2) { transition-delay: .3s; }
+    > *:nth-child(3) { transition-delay: .25s; }
+    > *:nth-child(4) { transition-delay: .2s; }
+    > *:nth-child(5) { transition-delay: .15s; }
 
     @include breakpoint($large) {
       height: 90vh;
@@ -233,7 +233,7 @@ body {
     z-index: 0;
 
     > * {
-      margin-top: -50px;
+      margin-top: -30px;
       opacity: 0;
       transition: all .1s .1s ease;
     }
@@ -257,7 +257,7 @@ body {
     z-index: 0;
 
     > * {
-      margin-top: -50px;
+      margin-top: -30px;
       opacity: 0;
       transition: all .1s .1s ease;
     }
