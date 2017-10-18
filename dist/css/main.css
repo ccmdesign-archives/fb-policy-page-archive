@@ -93,10 +93,14 @@ body {
       width: 50vw;
       height: 100vh;
       margin-left: 50vw;
+      margin-top: 0;
       transition: margin-left .3s .1s ease; } }
   @media (max-width: 63.9375em) {
     .foreground {
       position: relative; } }
+  @media (min-width: 64em) {
+    .foreground--fr {
+      text-align: right; } }
   .foreground__content {
     padding: 5vh;
     opacity: 1;
@@ -104,7 +108,17 @@ body {
     position: absolute;
     top: 0; }
     .foreground__content > * {
-      transition: all 1s .1s ease; }
+      transition: all .4s .1s ease; }
+    .foreground__content > *:first-child {
+      transition-delay: .4s; }
+    .foreground__content > *:nth-child(2) {
+      transition-delay: .25s; }
+    .foreground__content > *:nth-child(3) {
+      transition-delay: .2s; }
+    .foreground__content > *:nth-child(4) {
+      transition-delay: .15s; }
+    .foreground__content > *:nth-child(5) {
+      transition-delay: .1s; }
     @media (min-width: 64em) {
       .foreground__content {
         height: 90vh;
@@ -156,6 +170,7 @@ body {
 .js-en .foreground--fr {
   z-index: 0; }
   .js-en .foreground--fr > * {
+    margin-top: -50px;
     opacity: 0;
     transition: all .1s .1s ease; }
 
@@ -170,5 +185,6 @@ body {
 .js-fr .foreground--en {
   z-index: 0; }
   .js-fr .foreground--en > * {
+    margin-top: -50px;
     opacity: 0;
     transition: all .1s .1s ease; }
