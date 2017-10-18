@@ -63,6 +63,8 @@ body {
 
   .header--fr,
   .header--en {
+    text-align: center;
+
     @include breakpoint($large) {
       width: 50vw;
     }
@@ -74,7 +76,7 @@ body {
   margin: -80px 0 -60px;
 
   @include breakpoint($large) {
-    width: 100%
+    width: 600px;
   }
 }
 
@@ -105,7 +107,7 @@ body {
   transition: all .3s ease;
   padding: 10px 15px;
   font-size: 1.2rem;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   &:hover {
     background-color: $main-color;
@@ -133,7 +135,7 @@ body {
   }
 
   &__content {
-    padding: 5%;
+    padding: 5vh;
     opacity: 1;
     z-index: 10;
     transition: all .3s .1s ease;

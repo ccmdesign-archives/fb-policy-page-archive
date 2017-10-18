@@ -1,0 +1,173 @@
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  background-color: #3b5998; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.lang-switch {
+  text-align: center;
+  z-index: 10;
+  width: 100%; }
+  .lang-switch > span {
+    font-size: 1rem;
+    display: inline-block;
+    padding: 6px 15px;
+    margin: 10px;
+    cursor: pointer;
+    color: #3b5998;
+    border: 1px solid #3b5998;
+    transition: all .3s ease; }
+    .lang-switch > span:hover {
+      background-color: rgba(59, 89, 152, 0.2);
+      transition: all .3s ease; }
+
+.header {
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #ffffff 0%, #e5e5e5 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #ffffff 0%, #e5e5e5 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
+  @media (min-width: 64em) {
+    .header {
+      height: 100vh; } }
+  .header > div {
+    display: flex; }
+  .header .header--fr,
+  .header .header--en {
+    text-align: center; }
+    @media (min-width: 64em) {
+      .header .header--fr,
+      .header .header--en {
+        width: 50vw; } }
+
+.mockup {
+  width: 100vw;
+  margin: -80px 0 -60px; }
+  @media (min-width: 64em) {
+    .mockup {
+      width: 600px; } }
+
+.logo-wrapper {
+  text-align: center; }
+
+.facebook-logo {
+  max-width: 130px;
+  margin: 5% 0; }
+
+.button-wrapper {
+  text-align: center; }
+
+.button {
+  border: 1px solid #3b5998;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #3b5998;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  transition: all .3s ease;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  margin-bottom: 30px; }
+  .button:hover {
+    background-color: #3b5998;
+    color: white; }
+
+.foreground {
+  opacity: 0.95;
+  background-color: #3b5998;
+  color: white; }
+  @media (min-width: 64em) {
+    .foreground {
+      position: absolute;
+      top: 0;
+      width: 50vw;
+      height: 100vh;
+      margin-left: 50vw;
+      transition: margin-left .3s .1s ease; } }
+  @media (max-width: 63.9375em) {
+    .foreground {
+      position: relative; } }
+  .foreground__content {
+    padding: 5vh;
+    opacity: 1;
+    z-index: 10;
+    transition: all .3s .1s ease;
+    position: absolute;
+    top: 0; }
+    @media (min-width: 64em) {
+      .foreground__content {
+        height: 90vh;
+        overflow: auto; } }
+    @media (max-width: 63.9375em) {
+      .foreground__content {
+        background-color: #3b5998; } }
+  .foreground h1 {
+    font-family: "Roboto Slab", serif;
+    font-weight: 100;
+    font-size: 2.2rem;
+    margin-bottom: 15px; }
+  .foreground h2 {
+    font-size: 1.7rem;
+    font-size: 1.2rem;
+    margin-bottom: 30px; }
+  .foreground p, .foreground li {
+    font-weight: 200;
+    font-size: 1rem;
+    line-height: 1.62;
+    letter-spacing: .5px; }
+  .foreground li {
+    margin: 0 0 5px -10px;
+    padding: 5px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    list-style: none; }
+    .foreground li:hover {
+      border: 1px solid white; }
+  .foreground p, .foreground ul {
+    font-size: 1rem;
+    margin-bottom: 20px; }
+
+.by-line {
+  display: block;
+  background-color: #3b5998;
+  opacity: 0.95;
+  padding-bottom: 10px;
+  padding-left: 5%;
+  font-size: .8rem;
+  text-decoration: none;
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.7);
+  letter-spacing: .6px; }
+  .by-line:hover {
+    color: black; }
+
+@media (max-width: 63.9375em) {
+  .js-en .header--fr {
+    display: none; } }
+
+.js-en .foreground--fr {
+  z-index: 0;
+  opacity: 0;
+  transition: all .3s .1s ease; }
+
+@media (max-width: 63.9375em) {
+  .js-fr .header--en {
+    display: none; } }
+
+@media (min-width: 64em) {
+  .js-fr .foreground {
+    margin-left: 0; } }
+
+.js-fr .foreground--en {
+  z-index: 0;
+  opacity: 0;
+  transition: all .3s .1s ease; }
