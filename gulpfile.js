@@ -6,7 +6,7 @@ var browserSync = require('browser-sync').create();
 var del = require('del');
 
 // Serve - Starts the server and watch files changes
-gulp.task('serve', ['sass', 'html', 'images', 'js'], function() {
+gulp.task('serve', ['sass', 'html', 'images', 'js', 'pdfs'], function() {
   browserSync.init({
     server: {baseDir: './dist'},
     open: false
@@ -35,6 +35,14 @@ gulp.task('images', function() {
     .src('src/images/*')
     .pipe(gulp.dest('dist/images'));
 });
+
+// PDFs
+gulp.task('pdfs', function() {
+  return gulp
+    .src('src/pdfs/*.pdf')
+    .pipe(gulp.dest('dist/pdfs'));
+});
+
 
 // JS
 gulp.task('js', function() {
