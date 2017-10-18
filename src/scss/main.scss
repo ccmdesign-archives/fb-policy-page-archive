@@ -138,9 +138,13 @@ body {
     padding: 5vh;
     opacity: 1;
     z-index: 10;
-    transition: all .3s .1s ease;
     position: absolute;
     top: 0;
+
+    > * {
+      transition: all 1s .1s ease;
+    }
+
 
     @include breakpoint($large) {
       height: 90vh;
@@ -191,11 +195,9 @@ body {
 
 // Footer
 .by-line {
-  display: block;
-  background-color: $main-color;
+  position: absolute;
+  bottom: 10px;
   opacity: 0.95;
-  padding-bottom: 10px;
-  padding-left: 5%;
   font-size: .8rem;
   text-decoration: none;
   font-weight: 200;
@@ -217,8 +219,11 @@ body {
 
   .foreground--fr {
     z-index: 0;
-    opacity: 0;
-    transition: all .3s .1s ease;
+
+    > * {
+      opacity: 0;
+      transition: all .1s .1s ease;
+    }
   }
 }
 
@@ -238,7 +243,10 @@ body {
 
   .foreground--en {
     z-index: 0;
-    opacity: 0;
-    transition: all .3s .1s ease;
+
+    > * {
+      opacity: 0;
+      transition: all .1s .1s ease;
+    }
   }
 }
