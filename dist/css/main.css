@@ -64,7 +64,8 @@ body {
   width: 100vw; }
   @media (min-width: 64em) {
     .mockup {
-      width: 560px; } }
+      width: 50vw;
+      max-width: 560px; } }
 
 .logo-wrapper {
   text-align: center; }
@@ -135,6 +136,11 @@ body {
       .foreground__content {
         height: 100vh;
         overflow: auto; } }
+    @media (min-width: 80em) {
+      .foreground__content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; } }
     @media (max-width: 63.9375em) {
       .foreground__content {
         background-color: #3b5998; } }
@@ -167,11 +173,7 @@ body {
     margin-bottom: 20px; }
 
 .by-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   box-sizing: border-box;
-  padding: 10px 55px;
   width: 100%;
   opacity: 0.95;
   font-size: .8rem;
