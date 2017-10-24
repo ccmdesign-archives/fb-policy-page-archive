@@ -13,6 +13,9 @@ body {
   position: relative;
   z-index: 10;
   width: 100%; }
+  @media (min-width: 80em) {
+    .lang-switch {
+      height: 5vh; } }
   .lang-switch > span {
     font-size: 1rem;
     display: inline-block;
@@ -59,6 +62,14 @@ body {
       .header .header--fr,
       .header .header--en {
         width: 50vw; } }
+    @media (min-width: 80em) {
+      .header .header--fr,
+      .header .header--en {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 95vh; } }
 
 .mockup {
   width: 100vw; }
@@ -135,7 +146,8 @@ body {
     @media (min-width: 64em) {
       .foreground__content {
         height: 100vh;
-        overflow: auto; } }
+        overflow: auto;
+        padding: 8vh 50px 5vh; } }
     @media (min-width: 80em) {
       .foreground__content {
         display: flex;
@@ -184,7 +196,8 @@ body {
   text-align: center; }
   @media (min-width: 64em) {
     .by-line {
-      text-align: left; } }
+      text-align: left;
+      margin-top: 50px; } }
   .by-line:hover {
     color: black; }
 
