@@ -5,7 +5,8 @@ body {
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 .lang-switch {
   text-align: center;
@@ -20,17 +21,20 @@ body {
     cursor: pointer;
     color: #3b5998;
     border: 1px solid #3b5998;
-    transition: all .3s ease;
-    opacity: .4; }
+    transition: all .3s ease; }
+    @media (min-width: 64em) {
+      .lang-switch > span {
+        opacity: .4; } }
     .lang-switch > span:hover {
       background-color: rgba(59, 89, 152, 0.2);
       transition: all .3s ease; }
 
-.js-en .lang-switch--en,
-.js-fr .lang-switch--fr {
-  border-color: white;
-  color: white;
-  opacity: 1; }
+@media (min-width: 64em) {
+  .js-en .lang-switch--en,
+  .js-fr .lang-switch--fr {
+    border-color: white;
+    color: white;
+    opacity: 1; } }
 
 .header {
   background: #ffffff;
@@ -62,15 +66,17 @@ body {
   width: 100vw; }
   @media (min-width: 64em) {
     .mockup {
-      width: 600px;
-      margin: 0 0 0 30px;
+      max-width: 95%;
+      margin: 0 auto;
+      position: relative;
       flex: 1; } }
 
 .logo-wrapper {
   text-align: center; }
 
 .facebook-logo {
-  max-width: 130px;
+  max-width: 150px;
+  width: 80%;
   margin: 5% 0; }
 
 .button-wrapper {
@@ -144,7 +150,7 @@ body {
     font-family: "Roboto Slab", serif;
     font-weight: 100;
     font-size: 2.2rem;
-    margin-bottom: 15px; }
+    margin-bottom: 35px; }
     @media (min-width: 64em) {
       .foreground h1 {
         margin-bottom: 55px; } }
@@ -180,12 +186,17 @@ body {
   text-decoration: none;
   font-weight: 200;
   color: rgba(0, 0, 0, 0.7);
-  letter-spacing: .6px; }
+  letter-spacing: .6px;
+  text-align: center; }
+  @media (min-width: 64em) {
+    .by-line {
+      text-align: left; } }
   .by-line:hover {
     color: black; }
 
-.js-fr .by-line {
-  text-align: right; }
+@media (min-width: 64em) {
+  .js-fr .by-line {
+    text-align: right; } }
 
 @media (max-width: 63.9375em) {
   .js-en .header--fr {

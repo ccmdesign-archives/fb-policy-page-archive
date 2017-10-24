@@ -21,6 +21,7 @@ body {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 // Lang switch
@@ -39,7 +40,7 @@ body {
     color: $main-color;
     border: 1px solid $main-color;
     transition: all .3s ease;
-    opacity: .4;
+    @include breakpoint($large) { opacity: .4; }
 
     &:hover {
       background-color: rgba($main-color, .2);
@@ -50,9 +51,11 @@ body {
 
 .js-en .lang-switch--en,
 .js-fr .lang-switch--fr {
-  border-color: white;
-  color: white;
-  opacity: 1;
+  @include breakpoint($large) {
+    border-color: white;
+    color: white;
+    opacity: 1;
+  }
 }
 
 .header {
@@ -86,8 +89,9 @@ body {
   width: 100vw;
 
   @include breakpoint($large) {
-    width: 600px;
-    margin: 0 0 0 30px;
+    max-width: 95%;
+    margin: 0 auto;
+    position: relative;
     flex: 1;
   }
 }
@@ -98,7 +102,8 @@ body {
 }
 
 .facebook-logo {
-  max-width: 130px;
+  max-width: 150px;
+  width: 80%;
   margin: 5% 0;
 }
 
@@ -187,7 +192,7 @@ body {
     font-family: $serif;
     font-weight: 100;
     font-size: 2.2rem;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     @include breakpoint($large) { margin-bottom: 55px; }
   }
 
@@ -235,6 +240,8 @@ body {
   font-weight: 200;
   color: rgba(black, .7);
   letter-spacing: .6px;
+  text-align: center;
+  @include breakpoint($large) { text-align: left; }
 
   &:hover {
     color: rgba(black, 1);
@@ -242,7 +249,7 @@ body {
 }
 
 .js-fr .by-line {
-  text-align: right;
+  @include breakpoint($large) { text-align: right; }
 }
 
 // Manipulation
