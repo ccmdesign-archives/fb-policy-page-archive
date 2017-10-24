@@ -26,6 +26,7 @@ body {
 // Lang switch
 .lang-switch {
   text-align: center;
+  position: relative;
   z-index: 10;
   width: 100%;
 
@@ -38,12 +39,20 @@ body {
     color: $main-color;
     border: 1px solid $main-color;
     transition: all .3s ease;
+    opacity: .4;
 
     &:hover {
       background-color: rgba($main-color, .2);
       transition: all .3s ease;
     }
   }
+}
+
+.js-en .lang-switch--en,
+.js-fr .lang-switch--fr {
+  border-color: white;
+  color: white;
+  opacity: 1;
 }
 
 .header {
@@ -67,16 +76,19 @@ body {
 
     @include breakpoint($large) {
       width: 50vw;
+      display: flex;
+      flex-direction: column;
     }
   }
 }
 
 .mockup {
   width: 100vw;
-  margin: -80px 0 -60px;
 
   @include breakpoint($large) {
     width: 600px;
+    margin: 0 0 0 30px;
+    flex: 1;
   }
 }
 
@@ -161,6 +173,9 @@ body {
     @include breakpoint($large) {
       height: 90vh;
       overflow: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
     }
 
     @include breakpoint($large-down) {
@@ -173,6 +188,7 @@ body {
     font-weight: 100;
     font-size: 2.2rem;
     margin-bottom: 15px;
+    @include breakpoint($large) { margin-bottom: 55px; }
   }
 
   h2 {
@@ -208,8 +224,11 @@ body {
 // Footer
 .by-line {
   position: absolute;
-  bottom: 10px;
-  left: 5vh;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 10px 55px;
+  width: 100%;
   opacity: 0.95;
   font-size: .8rem;
   text-decoration: none;
@@ -220,6 +239,10 @@ body {
   &:hover {
     color: rgba(black, 1);
   }
+}
+
+.js-fr .by-line {
+  text-align: right;
 }
 
 // Manipulation
