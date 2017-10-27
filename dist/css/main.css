@@ -13,7 +13,7 @@ body {
   position: relative;
   z-index: 10;
   width: 100%; }
-  @media (min-width: 80em) {
+  @media (min-width: 90em) {
     .lang-switch {
       height: 5vh; } }
   .lang-switch > span {
@@ -62,7 +62,7 @@ body {
       .header .header--fr,
       .header .header--en {
         width: 50vw; } }
-    @media (min-width: 80em) {
+    @media (min-width: 90em) {
       .header .header--fr,
       .header .header--en {
         display: flex;
@@ -75,7 +75,7 @@ body {
   width: 100vw; }
   @media (min-width: 64em) {
     .mockup {
-      width: 50vw;
+      width: 60vh;
       max-width: 560px; } }
 
 .logo-wrapper {
@@ -148,7 +148,7 @@ body {
         height: 100vh;
         overflow: auto;
         padding: 8vh 50px 5vh; } }
-    @media (min-width: 80em) {
+    @media (min-width: 90em) {
       .foreground__content {
         display: flex;
         justify-content: center;

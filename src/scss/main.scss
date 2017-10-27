@@ -10,7 +10,7 @@ $medium-down: screen and (max-width: 40em);
 $medium-only: screen and (min-width: 40em) and (max-width: 63.9375em);
 $large-down: screen and (max-width: 63.9375em);
 $large: screen and (min-width: 64em);
-$very-large: screen and (min-width: 80em);
+$very-large: screen and (min-width: 90em);
 
 body {
   font-size: 16px;
@@ -96,7 +96,7 @@ body {
   width: 100vw;
 
   @include breakpoint($large) {
-    width: 50vw;
+    width: 60vh;
     max-width: 560px;
   }
 }
