@@ -41,7 +41,7 @@ body {
     color: $main-color;
     border: 1px solid $main-color;
     transition: all .3s ease;
-    @include breakpoint($large) { opacity: .4; }
+    opacity: .4;
 
     &:hover {
       background-color: rgba($main-color, .2);
@@ -52,19 +52,16 @@ body {
 
 .js-en .lang-switch--en,
 .js-fr .lang-switch--fr {
+  opacity: 1;
+
   @include breakpoint($large) {
     border-color: white;
     color: white;
-    opacity: 1;
   }
 }
 
 .header {
   background: #ffffff; /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #ffffff 0%, #e5e5e5 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #ffffff 0%,#e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #ffffff 0%,#e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
   @include breakpoint($large) {
     height: 100vh;
