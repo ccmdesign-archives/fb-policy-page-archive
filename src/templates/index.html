@@ -24,7 +24,8 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400|Roboto:100,100i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   </head>
 
   <body>
@@ -38,14 +39,28 @@
         <div>
           <div class="header--en">
             <div class="logo-wrapper"><img class="facebook-logo" src="images/facebook-logo.svg" alt=""></div>
-            <img class="mockup mockup--en" src="./images/cyber-hygiene-report-en-mockup.jpg" alt="">
-            <div class="button-wrapper"><a href="./pdfs/cyber-hygiene-en.pdf" download class="button">Download</a></div>
+
+            <div style="position: relative;">
+              <img class="mockup mockup--en" src="./images/cyber-hygiene-report-en-mockup.jpg" alt="">
+              <a href="./pdfs/cyber-hygiene-en.pdf" download class="header__download-btn"><i class="material-icons">file_download</i></a>
+            </div>
+
+            <video width="400" controls>
+              <source src="/videos/video.webm"/>
+            </video>
           </div>
 
           <div class="header--fr">
             <div class="logo-wrapper"><img class="facebook-logo" src="images/facebook-logo.svg" alt=""></div>
-            <img class="mockup mockup--fr" src="./images/cyber-hygiene-report-fr-mockup.jpg" alt="">
-            <div class="button-wrapper"><a href="./pdfs/cyber-hygiene-fr.pdf" download class="button">Download</a></div>
+
+            <div style="position: relative;">
+              <img class="mockup mockup--fr" src="./images/cyber-hygiene-report-fr-mockup.jpg" alt="">
+              <a href="./pdfs/cyber-hygiene-en.pdf" download class="header__download-btn"><i class="material-icons">file_download</i></a>
+            </div>
+
+            <video width="400" controls style="pointer-events:none; opacity: 0.3;">
+              <source src="/videos/video.webm"/>
+            </video>
           </div>
         </div>
       </div>

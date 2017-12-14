@@ -71,6 +71,20 @@ body {
     display: flex;
   }
 
+  .header__download-btn {
+    color: #3b5998;
+    position: absolute;
+    top: 50%;
+    right: 7%;
+    font-size: 20px;
+    opacity: 0.6;
+    transition: 0.5s opacity;
+  }
+
+  .header__download-btn:hover {
+    opacity: 1;
+  }
+
   .header--fr,
   .header--en {
     text-align: center;
@@ -93,8 +107,8 @@ body {
   width: 100vw;
 
   @include breakpoint($large) {
-    width: 60vh;
-    max-width: 560px;
+    width: 50vh;
+    max-width: 550px;
   }
 }
 
